@@ -18,7 +18,7 @@ export class PratosCadastroPage implements OnInit {
     private pratoServ: PratoService) {
      this.iniciarForm();
   }
-  
+   
   
   ngOnInit() {
   }

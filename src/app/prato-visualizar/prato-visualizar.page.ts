@@ -48,5 +48,9 @@ prato : Prato = new Prato();
   remover(){
     this.navCtrl.navigateForward(['/prato-remove',this.prato.id]);
   }
+editar(){
+  this.navCtrl.navigateForward(['/prato-editar']);
+}
+
 
 } 
