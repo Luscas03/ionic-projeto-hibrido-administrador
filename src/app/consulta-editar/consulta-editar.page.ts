@@ -58,7 +58,7 @@ export class ConsultaEditarPage implements OnInit {
       this.consultaServ.atualizar(this.consulta.id, this.formGroup.value).subscribe(response => {
         this.navCtrl.navigateForward('/home');
         load.dismiss();
-        this.template.myAlert('Alterado com Sucesso!');
+        this.template.myAlert('Consulta alterada com Sucesso!');
       
       }
       

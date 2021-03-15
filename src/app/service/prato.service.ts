@@ -54,10 +54,10 @@ buscarPorId(id : any): Observable<any>{
             let id = response.payload.id;
 
             // dados do cliente no objeto CLiente
-            let consulta : Prato = new Prato();
-            consulta.setData(id,data);
+            let prato : Prato = new Prato();
+            prato.setData(id,data);
 
-            observe.next(consulta);
+            observe.next(prato);
         },err=>{
             observe.next(null);
         })

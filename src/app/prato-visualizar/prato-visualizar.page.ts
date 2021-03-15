@@ -58,7 +58,7 @@ export class PratoVisualizarPage implements OnInit {
     this.navCtrl.navigateForward(['/prato-remove', this.prato.id]);
   }
 editar(){
-  this.navCtrl.navigateForward(['/prato-editar']);
+  this.navCtrl.navigateForward(['/prato-editar', this.prato.id]);
 }
 
 

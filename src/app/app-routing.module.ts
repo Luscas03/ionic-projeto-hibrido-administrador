@@ -97,7 +97,12 @@ const routes: Routes = [
   {
     path: 'consulta-editar/:id',
     loadChildren: () => import('./consulta-editar/consulta-editar.module').then( m => m.ConsultaEditarPageModule)
+  },
+  {
+    path: 'prato-editar/:id',
+    loadChildren: () => import('./prato-editar/prato-editar.module').then( m => m.PratoEditarPageModule)
   }
+
 
 
  
