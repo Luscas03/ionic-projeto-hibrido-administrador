@@ -29,7 +29,7 @@ export class ConsultaVisualizarPage implements OnInit {
       
       this.consultaServ.buscarPorId(id).subscribe(response=>{
         this.consulta = response;
-        console.log(this.consulta);
+    
         this.iniciarForm();
       })
  
@@ -48,5 +48,8 @@ export class ConsultaVisualizarPage implements OnInit {
 
   remover(){
     this.navCtrl.navigateForward(['/consulta-remove',this.consulta.id]);
+  }
+  editar(){
+    this.navCtrl.navigateForward(['/consulta-editar',this.consulta.id]);
   }
 }

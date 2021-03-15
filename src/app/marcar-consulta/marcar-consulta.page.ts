@@ -36,12 +36,13 @@ export class MarcarConsultaPage implements OnInit {
  
     
     let d = new Date(this.formGroup.controls['date'].value);
-    console.log(d.getDay());
+   
     
 
     this.template.loading.then(load => { // iniciar o carregamento
       load.present(); // forçar inicio carremento
       this.consultaServ.cadastrar(this.formGroup.value).subscribe(response => {
+        this.navCtrl.navigateForward('/home');
         load.dismiss();
         this.template.myAlert(response);
         
@@ -49,13 +50,13 @@ export class MarcarConsultaPage implements OnInit {
 
     })
 
-    console.log(this.formGroup.value)
+
   }
   iniciarForm() {
     this.formGroup = this.formB.group({
-      tipo: ['', [Validators.required]],
-      especialidade: ['',[Validators.required]],
-      date: ['',[Validators.required]],
+      tipo: ['', [ Validators.required ]],
+      especialidade: ['', [Validators.required]],
+      date: ['', [Validators.required]],
       idcliente: [this.idcliente]
     })
   }

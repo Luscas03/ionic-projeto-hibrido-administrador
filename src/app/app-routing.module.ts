@@ -94,6 +94,13 @@ const routes: Routes = [
     path: 'prato-remove/:id',
     loadChildren: () => import('./prato-remove/prato-remove.module').then( m => m.PratoRemovePageModule)
   },
+  {
+    path: 'consulta-editar/:id',
+    loadChildren: () => import('./consulta-editar/consulta-editar.module').then( m => m.ConsultaEditarPageModule)
+  }
+
+
+ 
 
 
 

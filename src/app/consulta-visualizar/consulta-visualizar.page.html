@@ -39,9 +39,11 @@
         <ion-label>Data e Hora</ion-label>
         
         <ion-datetime displayFormat="D MMM YYYY H:mm" disabled="true" placeholder="Selecione a Data" formControlName="date"></ion-datetime>
-      </ion-item>
+      </ion-item> 
      
     </ion-list>
+    <ion-button color="medium" expand="block" (click)="editar()" [disabled]="formGroup.invalid" fill="outline">Editar</ion-button>
+
     <ion-button color="danger" expand="block" (click)="remover()" [disabled]="formGroup.invalid" fill="outline">Excluir</ion-button>
     
   </ion-card-content>
