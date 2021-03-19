@@ -19,10 +19,10 @@
        
         <ion-label>
           <ion-text color="light">
-          <p>{{consulta.tipo}}</p>
+            <p>{{consulta.date | date: 'dd/MM/yyyy'}} {{consulta.date | date: 'hh:mm'}}</p>
+          <p>{{consulta.especialidade}} | <i>{{consulta.tipo}}</i></p>
   
-          <p>{{consulta.especialidade}}</p>
-          <p>{{consulta.date | date: 'dd/MM/yyyy'}} {{consulta.date | date: 'hh:mm'}}</p>
+         
             </ion-text>
         </ion-label>
         <ion-avatar slot="end"><ion-icon size="large" name="arrow-redo-circle-outline" (click)="visualizar(consulta)"></ion-icon></ion-avatar>

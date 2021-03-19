@@ -26,6 +26,10 @@ export class PerfilAtualizarPage implements OnInit {
   private fireStorage : AngularFireStorage
   ) {
     this.iniciarForm();
+  }
+
+  ngOnInit() {
+    
     this.auth.authState.subscribe(response=>{
       this.idcliente = response.uid;
       this.clienteServ.obterPerfil(this.idcliente).subscribe(response=>{
@@ -34,9 +38,6 @@ export class PerfilAtualizarPage implements OnInit {
         this.downloadImage();
       })
     })
-  }
-
-  ngOnInit() {
   }
 
   atualizar(){
