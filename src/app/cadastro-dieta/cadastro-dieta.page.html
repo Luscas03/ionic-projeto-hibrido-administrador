@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Cadastrar Dietas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formGroup">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center" color="dark">Cadastrar Dieta</ion-card-title>
+  
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="ion-text-center"> <ion-text color="danger"><sub>ATENÇÃO! Essas informações serão enviadas ao usuário.</sub></ion-text></p>
+      <ion-item>
+        <ion-label position="floating" color="light">Nome da Dieta</ion-label>
+        <ion-input formControlName="nome"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="stacked" color="light">Descrição</ion-label>
+        <ion-textarea placeholder="Descrição da Dieta" formControlName="descricao"></ion-textarea>
+      </ion-item>
+
+      
+      <ion-button expand="block" color="medium" (click)="cadastrar()" fill="outline">Cadastrar</ion-button>
+
+    </ion-card-content>
+  </ion-card> 
+</form>
+</ion-content>

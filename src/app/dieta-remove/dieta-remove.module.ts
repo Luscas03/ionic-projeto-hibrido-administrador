@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DietaLowCarbPageRoutingModule } from './dieta-low-carb-routing.module';
+import { DietaRemovePageRoutingModule } from './dieta-remove-routing.module';
 
-import { DietaLowCarbPage } from './dieta-low-carb.page';
+import { DietaRemovePage } from './dieta-remove.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DietaLowCarbPageRoutingModule
+    DietaRemovePageRoutingModule
   ],
-  declarations: [DietaLowCarbPage]
+  declarations: [DietaRemovePage]
 })
-export class DietaLowCarbPageModule {}
+export class DietaRemovePageModule {}

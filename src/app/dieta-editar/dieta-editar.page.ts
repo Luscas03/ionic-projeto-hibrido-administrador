@@ -1,53 +1,51 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { NavController } from '@ionic/angular';
-import { PratoService } from '../service/prato.service';
-import { TemplateService } from '../service/template.service';
-import { Prato } from '../model/prato';
 import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
+import { Dieta } from '../model/dieta';
+import { DietasService } from '../service/dietas.service';
+import { TemplateService } from '../service/template.service';
 
 @Component({
-  selector: 'app-prato-editar',
-  templateUrl: './prato-editar.page.html',
-  styleUrls: ['./prato-editar.page.scss'],
+  selector: 'app-dieta-editar',
+  templateUrl: './dieta-editar.page.html',
+  styleUrls: ['./dieta-editar.page.scss'],
 })
-export class PratoEditarPage implements OnInit {
+export class DietaEditarPage implements OnInit {
   formGroup: FormGroup;
-  prato : Prato = new Prato();
+  dieta: Dieta = new Dieta();
   constructor(private formB: FormBuilder,
     private navCtrl: NavController, 
     private template: TemplateService,
-    private pratoServ: PratoService,
+    private dietasServ: DietasService,
     private activatedRoute : ActivatedRoute) { 
       this.iniciarForm();
     }
 
   ngOnInit() {
-
     this.activatedRoute.paramMap.subscribe(idUrl=>{
       let id = idUrl.get('id');
       
-      this.pratoServ.buscarPorId(id).subscribe(response=>{
-        this.prato = response;
+      this.dietasServ.buscarPorId(id).subscribe(response=>{
+        this.dieta = response;
      
         this.iniciarForm();
-
+  
       })
  
     })
 
     
   }
-  
   editar() {
 
     this.template.loading.then(load => { // iniciar o carregamento
       load.present(); // forçar inicio carremento
 
-      this.pratoServ.atualizar(this.prato.id, this.formGroup.value).subscribe(response => {
-        this.navCtrl.navigateForward('/home');
+      this.dietasServ.atualizar(this.dieta.id, this.formGroup.value).subscribe(response => {
+        this.navCtrl.navigateForward(['/dieta-visualizar', this.dieta.id]);
         load.dismiss();
-        this.template.myAlert('Prato alterado com Sucesso!');
+        this.template.myAlert('Dieta alterada com Sucesso!');
       
       }
       
@@ -58,13 +56,12 @@ export class PratoEditarPage implements OnInit {
   }
   iniciarForm() {
     this.formGroup = this.formB.group({
-      id :[this.prato.id],
-      nomeprato: [this.prato.nomeprato],
-      calorias: [this.prato.calorias],
-      grupo: [this.prato.grupo] 
+      id :[this.dieta.id],
+      nome: [this.dieta.nome],
+      descricao : [this.dieta.descricao],
+
 
     })
   }
 
 }
- 

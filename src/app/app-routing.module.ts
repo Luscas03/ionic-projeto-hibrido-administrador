@@ -62,14 +62,7 @@ const routes: Routes = [
     path: 'servicos-user',
     loadChildren: () => import('./servicos-user/servicos-user.module').then( m => m.ServicosUserPageModule)
   },
-  {
-    path: 'dieta-cetogenica',
-    loadChildren: () => import('./dieta-cetogenica/dieta-cetogenica.module').then( m => m.DietaCetogenicaPageModule)
-  },
-  {
-    path: 'dieta-low-carb',
-    loadChildren: () => import('./dieta-low-carb/dieta-low-carb.module').then( m => m.DietaLowCarbPageModule)
-  },
+ 
   {
     path: 'pratos-cadastro',
     loadChildren: () => import('./pratos-cadastro/pratos-cadastro.module').then( m => m.PratosCadastroPageModule)
@@ -101,7 +94,27 @@ const routes: Routes = [
   {
     path: 'prato-editar/:id',
     loadChildren: () => import('./prato-editar/prato-editar.module').then( m => m.PratoEditarPageModule)
+  },
+
+  {
+    path: 'cadastro-dieta',
+    loadChildren: () => import('./cadastro-dieta/cadastro-dieta.module').then( m => m.CadastroDietaPageModule)
+  },
+  {
+    path: 'dieta-visualizar/:id',
+    loadChildren: () => import('./dieta-visualizar/dieta-visualizar.module').then( m => m.DietaVisualizarPageModule)
+  },
+  {
+    path: 'dieta-remove/:id',
+    loadChildren: () => import('./dieta-remove/dieta-remove.module').then( m => m.DietaRemovePageModule)
+  },
+  {
+    path: 'dieta-editar/:id',
+    loadChildren: () => import('./dieta-editar/dieta-editar.module').then( m => m.DietaEditarPageModule)
   }
+
+
+
 
 
 
