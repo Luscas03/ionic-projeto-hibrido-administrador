@@ -14,7 +14,7 @@ export class ConsultaService{
             this.firestore.collection('consulta').add(consulta).then(response=>{
                 observe.next("Agendado com sucesso");
             }).catch(err=>{
-                console.log(err);
+             
                 observe.next("Erro ao agendar");
             })
             // fim codigo

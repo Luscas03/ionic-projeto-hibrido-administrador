@@ -53,6 +53,12 @@ export class AppComponent implements OnInit {
     },
     {
 
+      title: 'Cadastrar serviços',
+      url: '/servico-cadastrar',
+      icon: 'accessibility'
+    },
+    {
+
       title: 'Cadastro de Pratos',
       url: '/pratos-cadastro',
       icon: 'nutrition'

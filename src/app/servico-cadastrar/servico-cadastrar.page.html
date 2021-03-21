@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      <ion-title class="ion-text-center">Cadastrar Servico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formGroup">
+<ion-card id="grad">
+<ion-card-content>
+  
+  <ion-item>
+    <ion-label position="floating" color="light">Nome do Serviço</ion-label>
+    <ion-input formControlName="nome"></ion-input>
+
+  </ion-item>
+  <ion-button color="medium" fill="outline" (click)="cadastrar()" expand="block" [disabled]= "formGroup.invalid">Cadastrar</ion-button>
+  
+  
+  
+  
+</ion-card-content>
+</ion-card>
+</form>
+</ion-content>
