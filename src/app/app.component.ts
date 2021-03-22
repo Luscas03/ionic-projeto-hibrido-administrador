@@ -34,9 +34,16 @@ export class AppComponent implements OnInit {
     },
     {
 
-      title: 'Dietas',
+      title: 'Listar Dietas',
       url: '/dieta-user',
-      icon: 'barbell'
+      icon: 'list'
+     
+    },
+    {
+
+      title: 'Listar Serviços',
+      url: '/servicos-user',
+      icon: 'list'
     },
     {
 
@@ -45,12 +52,7 @@ export class AppComponent implements OnInit {
       icon: 'barbell'
     },
     
-    {
-
-      title: 'Serviços',
-      url: '/servicos-user',
-      icon: 'accessibility'
-    },
+ 
     {
 
       title: 'Cadastrar serviços',

@@ -35,7 +35,7 @@ export class ServicoCadastrarPage implements OnInit {
   
     iniciarForm() {
       this.formGroup = this.formB.group({
-        nome: ['', [Validators.required]]
+        nome: ['', [Validators.required, Validators.maxLength(20)]]
   
   
   

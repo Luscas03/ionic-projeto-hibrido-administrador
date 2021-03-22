@@ -14,6 +14,14 @@
 
         <div class="ion-text-center">
           <img src="{{imagem}}" />
+          <ion-item id="grad">
+            <!-- <input id="teste" type="file" (change)="uploadImage($event)" /> -->
+          
+            <label for='selecao-arquivo'> <ion-icon name="camera" id="att" color="dark"></ion-icon>
+          
+            </label>
+          <input id='selecao-arquivo' type='file' (change)="uploadImage($event)">
+          </ion-item>
         </div>
         
   <ion-item>
@@ -42,16 +50,7 @@
 
 </ion-card-content>
 
-<ion-item id="grad">
-  <!-- <input id="teste" type="file" (change)="uploadImage($event)" /> -->
 
-  <label for='selecao-arquivo'>
-    <ion-icon name="camera" id="att" color="dark"></ion-icon>
-
-  </label>
-  <input id='selecao-arquivo' type='file' (change)="uploadImage($event)">
-
-</ion-item>
 
 </ion-card>
 </form>

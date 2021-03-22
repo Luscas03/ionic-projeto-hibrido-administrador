@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Dieta } from '../model/dieta';
@@ -57,7 +57,7 @@ export class DietaEditarPage implements OnInit {
   iniciarForm() {
     this.formGroup = this.formB.group({
       id :[this.dieta.id],
-      nome: [this.dieta.nome],
+      nome: [this.dieta.nome, [Validators.maxLength(20)]],
       descricao : [this.dieta.descricao],
 
 

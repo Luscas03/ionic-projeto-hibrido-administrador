@@ -38,7 +38,7 @@ export class CadastroDietaPage implements OnInit {
 
   iniciarForm() {
     this.formGroup = this.formB.group({
-      nome: ['', [Validators.required]],
+      nome: ['', [Validators.required, Validators.maxLength(20)]],
       descricao: ['', [Validators.required]]
 
 
